@@ -18,3 +18,4 @@ Cocktail.create(name: "Wild Mule")
 Cocktail.create(name: "Cougars & Gold")
 Cocktail.create(name: "Gin & Tonic")
 Cocktail.create(name: "Flirty Flamingo")
+

@@ -5,10 +5,11 @@ class CocktailsController < ApplicationController
   end
 
   def new
-    @cocktail = Cocktail.all
+    @cocktail = Cocktail.new
   end
 
   def show
+    set_cocktail
   end
 
   def create
