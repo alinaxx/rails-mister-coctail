@@ -1,0 +1,22 @@
+<div class="text-center">
+    <h2><%= @cocktail.name.capitalize %></h2>
+ </div>
+
+  <div class="text-center">
+    <div class="text-center">
+      <h2>Recipe</h2>
+      <p>
+        <% @cocktail.doses.each do |dose| %>
+        <%= dose.description %>
+        <%= dose.ingredient.name %>
+        <%= link_to cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: 'Are you sure you want to delete?'} do %>
+        <i class="fa fa-trash-o"></i>
+        <% end %>
+      </p>
+    <% end %>
+    </div>
+  </div>
+
+    <div class="text-center">
+      <p><%= link_to 'mix!', new_cocktail_dose_path(@cocktail)  %></p>
+    </div>

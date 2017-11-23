@@ -1,5 +1,20 @@
-<ul>
+
+<div class="preheader padded">
+<h2>Space Cocktails</h1>
+
+
+<div class="intro">
+  <h1> These are my cocktails: </h1>
+</div>
+<p>
   <% @cocktails.each do |cocktail| %>
-    <li><%= cocktail.name %></li>
+  <div class="cocktail">
+    <%= cocktail.name %>
+    <%= link_to 'Show', cocktail %>
+  </div>
   <% end %>
-</ul>
+</p>
+
+<%= link_to 'New', new_cocktail_path  %>
+
+</div>
